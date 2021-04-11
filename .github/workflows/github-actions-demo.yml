@@ -1,6 +1,6 @@
 # From https://docs.github.com/en/actions/quickstart
 
-# Without the following, the worflow's name would default to .github/workflows/github-actions-demo.yml
+# Without the following, the workflow's name would default to .github/workflows/github-actions-demo.yml
 name: GitHub Actions Demo
 
 on: [push]
