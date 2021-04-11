@@ -4,8 +4,9 @@
 name: GitHub Actions Demo
 
 on: [push]
+
 jobs:
-  Explore-GitHub-Actions:
+  Explore_GitHub_Actions:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -19,3 +20,19 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  Explore_In_Parallel_On_MacOS:
+    runs-on: macos-11.0
+    steps:
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - name: Get info about .NET
+        run: |
+          echo "Running 'dotnet --info'"
+          dotnet --info
+  Explore_In_Parallel_On_Windows:
+    runs-on: windows-2016
+    steps:
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - name: Get info about .NET
+        run: |
+          echo "Running 'dotnet --info'"
+          dotnet --info
